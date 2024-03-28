@@ -5,7 +5,6 @@ const PlayerCard = ({ player }) => {
   function handleShowStatistics() {
     setShowStatistics(!showStatistics);
   }
-  // console.log(player.official_career);
   return (
     <>
       (
@@ -15,7 +14,7 @@ const PlayerCard = ({ player }) => {
             <img src={player.img} alt="" />
           </div>
         ) : (
-          <>
+          <div className="img-container">
             <h2 className="card-info">{player.name}</h2>
             <ul className="statisticList">
               {player.statistics.map((statistic, index) => (
@@ -25,7 +24,7 @@ const PlayerCard = ({ player }) => {
             <li key={player.official_career} className="career">
               {player.official_career}
             </li>
-          </>
+          </div>
         )}
       </div>
       )

@@ -1,10 +1,9 @@
 import React from "react";
 import PlayerCard from "./PlayerCard";
-const CardContainer = ({ data, search, sameTeam }) => {
+const CardContainer = ({ data, search}) => {
   const filteredPlayer = data.filter((player) =>
     player.name.toLowerCase().includes(search.toLowerCase().trim())
   );
-  //   console.log(sameTeam);
   return (
     <div className="card-container">
       {filteredPlayer.map((player, index) => (
